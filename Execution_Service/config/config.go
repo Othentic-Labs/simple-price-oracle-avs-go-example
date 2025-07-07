@@ -13,6 +13,7 @@ var (
 	PinataSecretApiKey          string
 	OTHENTIC_CLIENT_RPC_ADDRESS string
 	PrivateKey                  string
+	PerformerAddress            string
 )
 
 func Init() {
@@ -25,7 +26,7 @@ func Init() {
 	PinataSecretApiKey = os.Getenv("PINATA_SECRET_API_KEY")
 	OTHENTIC_CLIENT_RPC_ADDRESS = os.Getenv("OTHENTIC_CLIENT_RPC_ADDRESS")
 	PrivateKey = os.Getenv("PRIVATE_KEY_PERFORMER")
-
+	PerformerAddress = os.Getenv("PERFORMER_ADDRESS")
 	if PinataApiKey == "" || PinataSecretApiKey == "" || OTHENTIC_CLIENT_RPC_ADDRESS == "" || PrivateKey == "" {
 		log.Fatal("Environment variables are not set properly")
 	}
